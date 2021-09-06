@@ -10,31 +10,42 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin: -2rem 0rem 0rem 0rem;}
     .attribution a { color: hsl(228, 45%, 44%); }
     body{background-color:   hsl(185, 41%, 84%);font-family: 'Space Mono';}
-    .main{display: grid; grid-template-columns: 1fr 1fr; background-color: hsl(0, 0%, 100%);}
-    .tip-rate{display: grid;grid-template-columns: 1fr 1fr 1fr;grid-gap: 1rem;}
+    .main{display: grid; grid-template-columns: 1fr 1fr; background-color: hsl(0, 0%, 100%);width: 50%;margin: 10% auto;padding: 1rem;border-radius:0.5rem ;}
+    .tip-rate{display: grid;grid-template-columns: 1fr 1fr 1fr;grid-gap: 0.3rem;width: 100%;margin: -1rem 0rem 0rem 0rem;font-weight: 700;}
     .result{align-self: center;justify-self: center;padding: 2rem;height: fit-content;background-color: hsl(183, 100%, 15%);width: fit-content;border-radius: 0.5rem;color: hsl(189, 41%, 97%);}
-    .rate-button{background-color: hsl(183, 100%, 15%);color: hsl(0, 0%, 100%);width: 2rem;height: 1rem;text-align: center;padding:1rem 2rem;border-radius: 0.5rem;border: none;}
-    input{font-size: 24px;color: hsl(183, 100%, 15%);border: none;padding:0.5rem 1rem;width: 50%;border-radius: 0.5rem;margin: 0.5rem 0rem 1rem 0rem;}
-    .editable{background-color: hsl(185, 41%, 84%);color: hsl(184, 14%, 56%);width: 12px;}
-    .select-inputs{margin-left: 1rem;}
+    .rate-button{padding: 1rem;background-color: hsl(183, 100%, 15%);color: hsl(0, 0%, 100%);width: 80px;height: 45px;text-align: center!important;border-radius: 0.3rem;border: none;font-weight: 700;}
+    .people-input,.bill-input{text-align: right;font-size: 24px;color: hsl(183, 100%, 15%);border: none;padding:0.5rem 1rem;width: 85%;border-radius: 0.5rem;margin: -1rem 0rem 1rem 0rem;}
+    .editable{font-weight: 500;background-color: hsl(185, 41%, 84%);color: hsl(184, 14%, 56%);padding: 0rem;}
+    .select-inputs{margin-left: 1rem;width: 100%;display: flex;flex-direction: column;}
     .reset{background-color: hsl(172, 67%, 45%);color: hsl(183, 100%, 15%);padding: 0.5rem 5rem;border-radius: 0.3rem;border: none;margin-top: 50%;}
-    .amount-display{font-size: large;}
+    .amount-display{font-size: large;font-weight: 700;color: hsl(172, 67%, 45%);}
     .bill-input{background: url('./images/icon-dollar.svg') no-repeat scroll 7px 50% hsl(185, 25%, 90%);}
     .people-input{background: url('./images/icon-person.svg') no-repeat scroll 7px 50% hsl(185, 25%, 90%);}
     .row-display div{display: inline-block;margin-left: 2rem;}
+    .rate-button:hover,.rate-button:active{cursor: pointer;background-color: hsl(172, 67%, 45%);;}
+    .select-inputs span{width: fit-content;color: hsl(184, 14%, 56%);}
+    .editable:hover,.editable:active{background-color: transparent;border: 2px solid hsl(172, 67%, 45%);}
+    .reset:hover,.reset:active{background-color: hsl(172, 67%, 45%);cursor: pointer;}
+    @media (max-width:768px) {
+        .main
+        {
+          grid-template-columns: 1fr;
+          width: fit-content;
+        }
+    }
   </style>
-  <script src="./script.js"></script>
+  
 </head>
 <body>
   <main class="main">
     <div class="select-inputs">
-      <span style="color: hsl(184, 14%, 56%);">Bill</span>
+      <span>Bill</span>
       <br>
-      <input class="bill-input"/><br>
-      <span style="color: hsl(184, 14%, 56%);">Select Tip %</span>
+      <input class="bill-input" placeholder="0"/><br>
+      <span >Select Tip %</span>
       <br>
       <div class="tip-rate">
           <button value="5" class="rate-button">5%</button>
@@ -42,10 +53,10 @@
           <button value="15" class="rate-button">15%</button>
           <button value="25" class="rate-button">25%</button>
           <button value="50" class="rate-button">50%</button>
-          <input class="rate-button editable" contentEditable="true" placeholder="Custom"/>
+          <input class="rate-button editable"  placeholder="Custom"/>
       </div>
-      <span style="color: hsl(184, 14%, 56%);"> Number of People</span><br>
-      <input class="people-input"/>
+      <span style="color: hsl(184, 14%, 56%);"> Number of People<small id="warning"></small></span><br>
+      <input class="people-input" placeholder="0"/>
     </div>
     <div class="result">
         <span class="row-display"> Tip Amount<div class="amount-display">$0.0</div><br>
@@ -60,13 +71,14 @@
            
         </span>
           <br>
-          <button class="reset" disabled="disabled">Reset</button>
+          <button class="reset" >RESET</button>
     </div>
   </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Adhishreya</a>.
   </div>
+  <script src="./script.js"></script>
 </body>
 </html>
