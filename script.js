@@ -5,7 +5,7 @@ const peopleCountElement = document.getElementsByClassName("people-input")[0];
 const resetButtton = document.getElementsByClassName("reset")[0];
 const billCountElement = document.getElementsByClassName("bill-input")[0];
 resetButtton.disabled = true;
-
+resetButtton.style="background-color:hsl(184, 14%, 56%)"
 resetButtton.addEventListener("click",()=>{
     // console.log("click")
     totalAmountElement.innerHTML = `$0.00`;
@@ -53,15 +53,16 @@ peopleCountElement.addEventListener("input",(e)=>{
     {   
         const style={"background":"red","width":"10rem"}
         document.getElementsByClassName("people-input")[0].style.border="2px solid red";
-        document.getElementsByClassName("warning")[0].style="display:block;color:red;text-align:right";
-        totalAmountElement.innerHTML = `$${0.00.toString()}`;
-        tipAmountElement.innerHTML = `$${0.00.toString()}`;
+        document.getElementById("warning").style="display:flex;color:red;text-align:right;position:relative;left:1rem;";
+        totalAmountElement.innerHTML = `$0.00`;
+        tipAmountElement.innerHTML = `$0.00`;
     }
     else
     {
         document.getElementsByClassName("warning")[0].style.display="none";
         document.getElementsByClassName("people-input")[0].style.border="none";        
         setValue();
+        resetButtton.style="background-color: hsl(172, 67%, 45%)";
 
     }
 });

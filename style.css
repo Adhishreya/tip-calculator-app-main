@@ -85,7 +85,7 @@ body
     /* width: fit-content; */
     height: 100%;
 }
-.reset{background-color: hsl(172, 67%, 45%);color: hsl(183, 100%, 15%);padding: 0.5rem 5rem;border-radius: 0.3rem;border: none;margin-top: 50%;width:100%;}
+.reset{color: hsl(183, 100%, 15%);padding: 0.5rem 5rem;border-radius: 0.3rem;border: none;margin-top: 50%;width:100%;}
 .amount-display{font-size: large;font-weight: 700;color: hsl(172, 67%, 45%);font-size: 2em;position: relative;right: -1rem;}
 .bill-input{background: url('./images/icon-dollar.svg') no-repeat scroll 7px 50% hsl(185, 25%, 90%);}
 .people-input{background: url('./images/icon-person.svg') no-repeat scroll 7px 50% hsl(185, 25%, 90%);}
@@ -97,7 +97,7 @@ body
   /* display: flex;
   flex-direction: row; */
 }
-.warning
+#warning
 {
     display: none;
     color: red;
