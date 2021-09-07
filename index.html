@@ -14,27 +14,35 @@
     .attribution a { color: hsl(228, 45%, 44%); }
     body{background-color:   hsl(185, 41%, 84%);font-family: 'Space Mono';}
     .main{display: grid; grid-template-columns: 1fr 1fr; background-color: hsl(0, 0%, 100%);width: 50%;margin: 10% auto;padding: 1rem;border-radius:0.5rem ;}
-    .tip-rate{display: grid;grid-template-columns: 1fr 1fr 1fr;grid-gap: 0.3rem;width: 100%;margin: -1rem 0rem 0rem 0rem;font-weight: 700;}
+    .tip-rate{display: grid;grid-template-columns: 1fr 1fr 1fr;grid-gap: 0.3rem;width: 100%;margin: 0rem 0rem 1rem 0rem;font-weight: 700;}
     .result{align-self: center;justify-self: center;padding: 2rem;height: fit-content;background-color: hsl(183, 100%, 15%);width: fit-content;border-radius: 0.5rem;color: hsl(189, 41%, 97%);}
     .rate-button{padding: 1rem;background-color: hsl(183, 100%, 15%);color: hsl(0, 0%, 100%);width: 80px;height: 45px;text-align: center!important;border-radius: 0.3rem;border: none;font-weight: 700;}
-    .people-input,.bill-input{text-align: right;font-size: 24px;color: hsl(183, 100%, 15%);border: none;padding:0.5rem 1rem;width: 85%;border-radius: 0.5rem;margin: -1rem 0rem 1rem 0rem;}
+    .people-input,.bill-input{text-align: right;font-size: 24px;color: hsl(183, 100%, 15%);border: none;padding:0.5rem 1rem;width: 85%;border-radius: 0.5rem;margin: 0rem 0rem 1rem 0rem;}
     .editable{font-weight: 500;background-color: hsl(185, 41%, 84%);color: hsl(184, 14%, 56%);padding: 0rem;}
-    .select-inputs{margin-left: 1rem;width: 100%;display: flex;flex-direction: column;}
-    .reset{background-color: hsl(172, 67%, 45%);color: hsl(183, 100%, 15%);padding: 0.5rem 5rem;border-radius: 0.3rem;border: none;margin-top: 50%;}
-    .amount-display{font-size: large;font-weight: 700;color: hsl(172, 67%, 45%);}
+    .select-inputs{margin-left: 1rem;width: 100%;width: fit-content;height: 100%;}
+    .reset{background-color: hsl(172, 67%, 45%);color: hsl(183, 100%, 15%);padding: 0.5rem 5rem;border-radius: 0.3rem;border: none;margin-top: 50%;width:100%;}
+    .amount-display{font-size: large;font-weight: 700;color: hsl(172, 67%, 45%);font-size: 2em;position: relative;right: -1rem;}
     .bill-input{background: url('./images/icon-dollar.svg') no-repeat scroll 7px 50% hsl(185, 25%, 90%);}
     .people-input{background: url('./images/icon-person.svg') no-repeat scroll 7px 50% hsl(185, 25%, 90%);}
-    .row-display div{display: inline-block;margin-left: 2rem;}
+    .row-display{display: grid;grid-template-columns: 1fr 1fr;margin:0rem 1rem 1rem 0rem;}
     .rate-button:hover,.rate-button:active{cursor: pointer;background-color: hsl(172, 67%, 45%);;}
     .select-inputs span{width: fit-content;color: hsl(184, 14%, 56%);}
     .editable:hover,.editable:active{background-color: transparent;border: 2px solid hsl(172, 67%, 45%);}
     .reset:hover,.reset:active{background-color: hsl(172, 67%, 45%);cursor: pointer;}
+    small{justify-self: start;align-self: start;margin-top: -1rem;}
     @media (max-width:768px) {
         .main
         {
           grid-template-columns: 1fr;
           width: fit-content;
         }
+        .result
+        {
+          width: 80%;
+        }
+        .select-inputs,.reset
+        {width: 100%;}
+        
     }
   </style>
   
@@ -59,17 +67,15 @@
       <input class="people-input" placeholder="0"/>
     </div>
     <div class="result">
-        <span class="row-display"> Tip Amount<div class="amount-display">$0.0</div><br>
-          <small style="color: hsl(184, 14%, 56%);">/ person</small>
-          
-         
-        </span>
+        <span class="row-display"> <span class="row-card">Tip Amount</span><div class="amount-display">$0.00</div>
+            <small style="color: hsl(184, 14%, 56%);">/ person</small>
+        </span>        
+        
         <br>
-          <span class="row-display">Total <div class="amount-display">$0.0</div><br>
-            
+          <span class="row-display"><span class="row-card">Total</span> <div class="amount-display">$0.00</div>           
             <small style="color: hsl(184, 14%, 56%);">/ person</small>         
-           
-        </span>
+          </span>  
+        
           <br>
           <button class="reset" >RESET</button>
     </div>
