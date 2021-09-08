@@ -36,27 +36,25 @@ buttonArray.forEach((element,i)=>{
     buttonArray[prevIndex].style="background-color:hsl(183, 100%, 15%);color:hsl(0, 0%, 100%);";
     buttonArray[index].style="background-color: hsl(172, 67%, 45%);color:hsl(183, 100%, 15%);"
         setValue();
-        // console.log(rateValue);
         prevIndex=i;
     });
 
 });
 document.getElementsByClassName("editable")[0].addEventListener("input",(e)=>{
-    rateValue = Number(e.target.value);
+    rateValue = Math.abs(Number(e.target.value));
+    document.getElementsByClassName("editable")[0].value=rateValue;
     setValue();
-    // console.log(rateValue);
 });
 
 billCountElement.addEventListener("input",(e)=>{
-    billValue = Number(e.target.value);
+    billValue = Math.abs(Number(e.target.value));
+    billCountElement.value=billValue;
     setValue();
-    // console.log(billValue);
 });
 
 peopleCountElement.addEventListener("input",(e)=>{
-    peopleCount = Number(e.target.value);
-    // console.log(typeof Number(peopleCount));
-    
+    peopleCount = Math.abs(Number(e.target.value));
+    peopleCountElement.value=peopleCount;
     if(peopleCount == 0)
     {   
         document.getElementsByClassName("people-input")[0].style.border="2px solid red";
