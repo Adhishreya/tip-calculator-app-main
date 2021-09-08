@@ -114,6 +114,18 @@ body
 .editable:hover,.editable:active{background-color: transparent;border: 2px solid hsl(172, 67%, 45%);}
 .reset:hover,.reset:active{background-color: hsl(172, 67%, 45%);cursor: pointer;}
 small{justify-self: start;align-self: start;}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 @media only screen and (max-width:1204px) {
     .main
     {

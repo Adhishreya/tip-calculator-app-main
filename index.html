@@ -17,7 +17,7 @@
     <div class="select-inputs">
       <span>Bill</span>
       <br>
-      <input class="bill-input" placeholder="0"/><br>
+      <input class="bill-input" type="number" placeholder="0"/><br>
       <span >Select Tip %</span>
       <br>
       <div class="tip-rate">
@@ -26,10 +26,10 @@
           <button value="15" class="rate-button">15%</button>
           <button value="25" class="rate-button">25%</button>
           <button value="50" class="rate-button">50%</button>
-          <input class="rate-button editable"  placeholder="Custom"/>
+          <input type="number" min="0" class="rate-button editable"  placeholder="Custom"/>
       </div>
       <span style="color: hsl(184, 14%, 56%);display: flex;"> Number of People<small id="warning">Can't be zero</small></span></span><br>
-      <input class="people-input" placeholder="0"/>
+      <input type="number" min="0" class="people-input" placeholder="0"/>
     </div>
     <div class="result">
         <span class="row-display"> <span class="row-card">Tip Amount</span><div class="amount-display tip-amount">$0.00</div>
