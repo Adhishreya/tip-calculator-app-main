@@ -23,10 +23,12 @@ body
   display: flex;
   flex-direction: row;
   background-color: hsl(0, 0%, 100%);
-  width: 50%;
+  width: 60%;
+  height: 100%;
+  height: fit-content;
   justify-content: center space-evenly;
   align-items: center;
-  margin: 10% auto;
+  margin: 5% auto;
   position: relative;
   padding: 1rem;
   border-radius:0.5rem ;
@@ -47,7 +49,7 @@ body
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  height: fit-content;
+  height: 100%;
   background-color: hsl(183, 100%, 15%);
   width: 100%;
   border-radius: 0.5rem;
@@ -88,9 +90,16 @@ body
     /* margin-left: 1rem; */
     width: 100%;
     /* width: fit-content; */
-    height: 100%;
+    height: 80%;
 }
-.reset{color: hsl(183, 100%, 15%);padding: 0.5rem 5rem;border-radius: 0.3rem;border: none;margin-top: 50%;width:100%;}
+.reset
+{
+  color: hsl(183, 100%, 15%);
+  padding: 0.5rem 5rem;
+  border-radius: 0.3rem;
+  border: none;
+  /* margin-top: 50%; */
+  width:100%;}
 .amount-display{font-size: large;font-weight: 700;color: hsl(172, 67%, 45%);font-size: 2em;position: relative;right: -1rem;}
 .bill-input{background: url('./images/icon-dollar.svg') no-repeat scroll 7px 50% hsl(185, 25%, 90%);}
 .people-input{background: url('./images/icon-person.svg') no-repeat scroll 7px 50% hsl(185, 25%, 90%);}
@@ -99,8 +108,6 @@ body
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin:0rem 1rem 1rem 0rem;
-  /* display: flex;
-  flex-direction: row; */
 }
 #warning
 {
@@ -108,12 +115,6 @@ body
     color: red;
     text-align:right;
 }
-/* .warning:active
-{
-    
-    
-    display: block;
-} */
 .rate-button:hover,.rate-button:active{cursor: pointer;background-color: hsl(172, 67%, 45%);;}
 .select-inputs span{width: fit-content;color: hsl(184, 14%, 56%);}
 .editable:hover,.editable:active{background-color: transparent;border: 2px solid hsl(172, 67%, 45%);}
@@ -133,14 +134,22 @@ input[type=number] {
 
 .heading
 {
-  color: hsl(183, 100%, 15%);
-  margin: auto;
-  width: 2rem;
-  height: 1rem;
+  margin: 5% auto;
+  width: 4rem;
+  height: 3rem;
 }
-.heading h1{
+.main-body
+{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+/* .heading p{
   height: fit-content;
-}
+  letter-spacing: 1rem;
+} */
 @media only screen and (max-width:1204px) {
     .main
     {
