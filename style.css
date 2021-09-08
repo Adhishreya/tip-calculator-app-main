@@ -98,11 +98,14 @@ body
   padding: 0.5rem 5rem;
   border-radius: 0.3rem;
   border: none;
-  /* margin-top: 50%; */
+  margin-top: 1.5rem;
   width:100%;}
 .amount-display{font-size: large;font-weight: 700;color: hsl(172, 67%, 45%);font-size: 2em;position: relative;right: -1rem;}
 .bill-input{background: url('./images/icon-dollar.svg') no-repeat scroll 7px 50% hsl(185, 25%, 90%);}
-.people-input{background: url('./images/icon-person.svg') no-repeat scroll 7px 50% hsl(185, 25%, 90%);}
+.people-input
+{
+  background: url('./images/icon-person.svg') no-repeat scroll 7px 50% hsl(185, 25%, 90%);
+}
 .row-display
 {
   display: grid;
@@ -143,6 +146,7 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   width: 80%;
+  margin: 5% auto;
   align-items: center;
   justify-content: center;
 }
